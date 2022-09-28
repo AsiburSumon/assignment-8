@@ -43,10 +43,13 @@ const Library = () => {
                 <div className="study-details">
                     <h2>Study Details</h2>
                     <div className='study-time'>
-                        <h4>Study Time: 0 second</h4>
+                        <h4>Study Time: <small>0</small> second</h4>
                     </div>
                     <div className='break-time'>
-                        <h4>Break Time: 0 second</h4>
+                        <h4>Break Time: <small>0</small> second</h4>
+                    </div>
+                    <div>
+                        <button className="activities-btn">Activity Completed</button>
                     </div>
                 </div>
             </div>

@@ -70,3 +70,11 @@
 .break-time h4{
     padding: 10px;
 }
+.activities-btn{
+    padding: 15px 25px;
+    margin-left: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: skyblue;
+    font-size: medium;
+}
