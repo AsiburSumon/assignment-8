@@ -6,6 +6,9 @@
     margin: 20px;
     margin-top: 60px;
 }
+.books-container h1{
+    color: orange;
+}
 .books-card{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -77,4 +80,8 @@
     border-radius: 20px;
     background-color: skyblue;
     font-size: medium;
+}
+.activities-btn:hover{
+    background-color: lightcoral;
+    color: white;
 }

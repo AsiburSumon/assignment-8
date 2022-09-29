@@ -1,9 +1,10 @@
-import Library from './components/Library/Library';
+import Task from "./components/Task/Task";
+
 
 function App() {
   return (
     <div>
-      <Library></Library>
+      <Task></Task>
     </div>
   );
 }

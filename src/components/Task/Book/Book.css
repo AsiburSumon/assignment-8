@@ -1,0 +1,36 @@
+.each-book{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.book-img img{
+    width: 300px;
+    height: 200px;
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.book-info{
+    padding-left: 10px;
+}
+.book-info h4{
+    margin-bottom: 0;
+}
+.book-info p{
+    margin-top: 0;
+}
+.book-btn{
+    width: 100%;
+    font-size: 20px;
+    background-color: skyblue;
+    border: 0;
+    border-radius: 0px 0px 8px 8px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0px;
+}
+.book-btn:hover{
+    background-color: rgb(81, 155, 185);
+}

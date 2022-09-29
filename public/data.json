@@ -1,0 +1,38 @@
+[
+    {
+        "title":"Math",
+        "img":"https://static.vecteezy.com/system/resources/previews/005/035/713/original/a-math-book-to-study-vector.jpg",
+        "id":"1",
+        "requiredTime":"20"
+    },
+    {
+        "title":"English",
+        "img":"https://d201g1c8t1ay3d.cloudfront.net/wp-content/uploads/2018/01/5-Books-For-Students-Studying-English-In-The-UK-1.jpg",
+        "id":"2",
+        "requiredTime":"25"
+    },
+    {
+        "title":"Physic",
+        "img":"https://images-na.ssl-images-amazon.com/images/I/61KZfvvD6hL.jpg",
+        "id":"3",
+        "requiredTime":"15"
+    },
+    {
+        "title":"Programming in Java",
+        "img":"https://m.media-amazon.com/images/I/51EWRgaqIKL.jpg",
+        "id":"4",
+        "requiredTime":"25"
+    },
+    {
+        "title":"Bangla",
+        "img":"https://1.bp.blogspot.com/-l4mJzROZ1Cw/X4BVOW1TxrI/AAAAAAAALcE/QZ9aEJjrVAI3R3TXv7XWewL3UzoIIL68wCLcBGAsYHQ/s16000/IMG_20201009_151713.jpg",
+        "id":"5",
+        "requiredTime":"17"
+    },
+    {
+        "title":"Story-Book",
+        "img":"https://upload.wikimedia.org/wikipedia/en/9/97/Himu-Humayun_Ahmed_%281993%29.jpg",
+        "id":"6",
+        "requiredTime":"30"
+    }
+]

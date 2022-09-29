@@ -1,18 +1,24 @@
-import React from 'react';
-import './Library.css';
+import React, { useEffect, useState } from 'react';
+import './Task.css';
 import image from '../../images/img1.jpg'
+import Book from './Book/Book';
 
-const Library = () => {
+const Task = () => {
+    const [books, setBooks] = useState([]);
+    useEffect(()=>{
+        fetch('data.json')
+        .then(res=>res.json())
+        .then(data=>setBooks(data))
+    },[])
     return (
         <div className='library-container'>
             <div className='books-container'>
-                <h1>SET-STUDY-TIME</h1>
+                <h1>STUDY-TIMER</h1>
                 <h2>Select your books</h2>
                 <div className='books-card'>
-                    <h1 style={{border:"2px solid green"}}>Hello</h1>
-                    <h1 style={{border:"2px solid green"}}>Hello</h1>
-                    <h1 style={{border:"2px solid green"}}>Hello</h1>
-                    <h1 style={{border:"2px solid green"}}>Hello</h1>
+                    {
+                        books.map(book=> <Book book={book} key={book.id}></Book>)
+                    }
                 </div>
             </div>
             <div className='activities'>
@@ -57,4 +63,4 @@ const Library = () => {
     );
 };
 
-export default Library;
+export default Task;
