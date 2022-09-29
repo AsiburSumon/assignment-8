@@ -2,7 +2,15 @@ import React from 'react';
 import image from '../../../images/img1.jpg';
 import './Activities.css'
 
-const Activities = () => {
+const Activities = (props) => {
+    const {activities} = props;
+   
+    let studyTime = 0;
+
+    for(const book of activities){
+       studyTime = studyTime+ JSON.parse(book.requiredTime);
+    }
+
     return (
         <div className='activities-side'>
             <div className='profile'>
@@ -32,7 +40,7 @@ const Activities = () => {
                 <div className="study-details">
                     <h2>Study Details</h2>
                     <div className='study-time'>
-                        <h4>Study Time: <small>0</small> mins</h4>
+                        <h4>Study Time: <small>{studyTime}</small> mins</h4>
                     </div>
                     <div className='break-time'>
                         <h4>Break Time: <small>0</small> mins</h4>

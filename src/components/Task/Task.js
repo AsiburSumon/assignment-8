@@ -5,14 +5,19 @@ import Activities from './Activities/Activities';
 
 const Task = () => {
     const [books, setBooks] = useState([]);
+    const [activities, setActivities] = useState([]);
+
     useEffect(()=>{
         fetch('data.json')
         .then(res=>res.json())
         .then(data=>setBooks(data))
     },[]);
+
     const handleAddToActivity =(books)=>{
-        console.log(books)
+        const time = [...activities, books];
+        setActivities(time)
     }
+
     return (
         <div className='library-container'>
             <div className='books-container'>
@@ -25,7 +30,7 @@ const Task = () => {
                 </div>
             </div>
             <div className='activities'>
-                <Activities></Activities>
+                <Activities activities={activities}></Activities>
             </div>
         </div>
     );
