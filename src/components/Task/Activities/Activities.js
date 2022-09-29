@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import image from '../../../images/img1.jpg';
 import Toastify from '../../Toastify/Toastify';
 import { addToDb } from '../../Utility/Utility';
@@ -8,9 +8,7 @@ const Activities = (props) => {
     const [times, setTimes] = useState([]);
 
     const {activities} = props;
-   
     let studyTime = 0;
-
     for(const book of activities){
        studyTime = studyTime + JSON.parse(book.requiredTime);
     }
@@ -21,6 +19,10 @@ const Activities = (props) => {
         setTimes(breakTime);
         addToDb(time);
     }
+    
+    useEffect(()=>{
+        
+    },[])
 
     return (
         <div className='activities-side'>

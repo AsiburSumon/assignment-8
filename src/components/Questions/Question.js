@@ -10,13 +10,13 @@ const Question = () => {
             </div>
             <div className='question'>
                 <h3>What is the difference between Props and State?</h3>
-                <p>ANS: Props- <br /> 1. Props are read only. <br />2. Props can not be modified. <br /> State- <br />
+                <p>ANS: <br /> Props- <br /> 1. Props are read only. <br />2. Props can not be modified. <br /> State- <br />
                 1. State changes can be asynchronous. <br />
                 2. State can be modified using this.setState.</p>
             </div>
             <div className='question'>
                 <h3>What is the purpose of useEffect without DataLoad?</h3>
-                <p>ANS:..........................</p>
+                <p>ANS: The useEffect Hook allows us to perform side effects in our components. Like as: "Directly updating the DOM, and timers." useEffect accepts two arguments. The second argument is optional.</p>
             </div>
         </div>
     );
