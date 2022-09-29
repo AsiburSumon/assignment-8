@@ -4,6 +4,7 @@ import Toastify from '../../Toastify/Toastify';
 import './Activities.css'
 
 const Activities = (props) => {
+    const [times, setTimes] = useState([]);
 
     const {activities} = props;
    
@@ -14,6 +15,10 @@ const Activities = (props) => {
     }
 
     const breakTimes = [5, 7, 10, 12];
+    const handleBreakTime =(time)=>{
+        const breakTime = [time];
+        setTimes(breakTime)
+    }
 
     return (
         <div className='activities-side'>
@@ -36,7 +41,7 @@ const Activities = (props) => {
                     <h2>Add a break</h2>
                     <div className="break-info">
                         {
-                            breakTimes.map(time=> <button>{time}mins</button>)
+                            breakTimes.map(time=> <button onClick={()=>handleBreakTime(time)}>{time}mins</button>)
                         }
                     </div>
                 </div>
@@ -46,7 +51,7 @@ const Activities = (props) => {
                         <h4>Study Time: <small>{studyTime}</small> mins</h4>
                     </div>
                     <div className='break-time'>
-                        <h4>Break Time: <small>0</small> mins</h4>
+                        <h4>Break Time: <small>{times} mins</small></h4>
                     </div>
                     <div>
                         <Toastify></Toastify>
