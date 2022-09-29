@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import image from '../../../images/img1.jpg';
-import { addToDb } from '../../../images/Utility/Utility';
 import Toastify from '../../Toastify/Toastify';
+import { addToDb } from '../../Utility/Utility';
 import './Activities.css'
 
 const Activities = (props) => {
@@ -21,7 +21,7 @@ const Activities = (props) => {
         setTimes(breakTime);
         addToDb(time);
     }
-    
+
     return (
         <div className='activities-side'>
             <div className='profile'>
