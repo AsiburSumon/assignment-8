@@ -13,13 +13,13 @@ const Task = () => {
         .then(data=>setBooks(data))
     },[]);
 
-    const handleAddToActivity =(books)=>{
-        const time = [...activities, books];
+    const handleAddToActivity =(book)=>{
+        const time = [...activities, book];
         setActivities(time)
     }
 
     return (
-        <div className='library-container'>
+        <div className='task-container'>
             <div className='books-container'>
                 <h1>STUDY-TIMER</h1>
                 <h2>Select your books</h2>

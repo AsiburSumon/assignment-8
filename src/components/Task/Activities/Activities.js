@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import image from '../../../images/img1.jpg';
+import Toastify from '../../Toastify/Toastify';
 import './Activities.css'
 
 const Activities = (props) => {
+
     const {activities} = props;
    
     let studyTime = 0;
@@ -31,10 +33,10 @@ const Activities = (props) => {
                 <div className='break'>
                     <h2>Add a break</h2>
                     <div className="break-info">
-                        <h4>30s</h4>
-                        <h4>40s</h4>
-                        <h4>45s</h4>
-                        <h4>50s</h4>
+                        <h4><button>5mins</button></h4>
+                        <h4><button>7mins</button></h4>
+                        <h4><button>10mins</button></h4>
+                        <h4><button>12mins</button></h4>
                     </div>
                 </div>
                 <div className="study-details">
@@ -46,7 +48,7 @@ const Activities = (props) => {
                         <h4>Break Time: <small>0</small> mins</h4>
                     </div>
                     <div>
-                        <button className="activities-btn">Activity Completed</button>
+                        <Toastify></Toastify>
                     </div>
                 </div>
         </div>
