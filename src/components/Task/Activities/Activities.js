@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import image from '../../../images/img1.jpg';
 import Toastify from '../../Toastify/Toastify';
-import { addToDb } from '../../Utility/Utility';
+import { addToDb, getTimeFromDb } from '../../Utility/Utility';
 import './Activities.css'
 
 const Activities = (props) => {
-    const [times, setTimes] = useState([]);
+    const [times, setTimes] = useState(0);
 
     const {activities} = props;
     let studyTime = 0;
@@ -19,11 +19,15 @@ const Activities = (props) => {
         setTimes(breakTime);
         addToDb(time);
     }
-    
     useEffect(()=>{
-        
-    },[])
-
+        let storeNewTime = 0;
+        const storedTime = getTimeFromDb();
+        console.log(storedTime)
+        if(storedTime.time){
+            storeNewTime = storedTime.time;
+            setTimes(storeNewTime);
+        }
+    },[times])
     return (
         <div className='activities-side'>
             <div className='profile'>
