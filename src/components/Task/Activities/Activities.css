@@ -33,14 +33,15 @@
     border-radius: 20px;
     text-align: center;
     margin-right: 5px;
+    padding: 10px;
 }
-.break-info h4 button{
+.break-info button{
     border: 1px solid red;
     border-radius: 50px;
     margin-right: 5px;
     background-color: white;
 }
-.break-info h4 button:hover{
+.break-info button:hover{
     background-color: lightcoral;
     border: none;
 }

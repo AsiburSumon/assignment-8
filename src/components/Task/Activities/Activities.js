@@ -10,8 +10,10 @@ const Activities = (props) => {
     let studyTime = 0;
 
     for(const book of activities){
-       studyTime = studyTime+ JSON.parse(book.requiredTime);
+       studyTime = studyTime + JSON.parse(book.requiredTime);
     }
+
+    const breakTimes = [5, 7, 10, 12];
 
     return (
         <div className='activities-side'>
@@ -33,10 +35,9 @@ const Activities = (props) => {
                 <div className='break'>
                     <h2>Add a break</h2>
                     <div className="break-info">
-                        <h4><button>5mins</button></h4>
-                        <h4><button>7mins</button></h4>
-                        <h4><button>10mins</button></h4>
-                        <h4><button>12mins</button></h4>
+                        {
+                            breakTimes.map(time=> <button>{time}mins</button>)
+                        }
                     </div>
                 </div>
                 <div className="study-details">

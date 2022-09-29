@@ -22,7 +22,7 @@ const Task = () => {
         <div className='task-container'>
             <div className='books-container'>
                 <h1>STUDY-TIMER</h1>
-                <h2>Select your books</h2>
+                <h2>Select your books and set time for today's study.</h2>
                 <div className='books-card'>
                     {
                         books.map(book=> <Book book={book} key={book.id} handleAddToActivity={handleAddToActivity}></Book>)
