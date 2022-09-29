@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Toastify = () => {
 
     const notify =()=>{
-        toast('Basic notification!')
+        toast('Congratulation Done!!', {position: toast.POSITION.TOP_CENTER})
     }
     return (
         <div>
