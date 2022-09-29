@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import image from '../../../images/img1.jpg';
+import { addToDb } from '../../../images/Utility/Utility';
 import Toastify from '../../Toastify/Toastify';
 import './Activities.css'
 
@@ -17,9 +18,10 @@ const Activities = (props) => {
     const breakTimes = [5, 7, 10, 12];
     const handleBreakTime =(time)=>{
         const breakTime = [time];
-        setTimes(breakTime)
+        setTimes(breakTime);
+        addToDb(time);
     }
-
+    
     return (
         <div className='activities-side'>
             <div className='profile'>
@@ -41,7 +43,7 @@ const Activities = (props) => {
                     <h2>Add a break</h2>
                     <div className="break-info">
                         {
-                            breakTimes.map(time=> <button onClick={()=>handleBreakTime(time)}>{time}mins</button>)
+                            breakTimes.map(time=> <button onClick={()=>handleBreakTime(time)} key={breakTimes.indexOf(time)}>{time}mins</button>)   
                         }
                     </div>
                 </div>
