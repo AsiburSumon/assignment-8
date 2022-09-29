@@ -4,7 +4,7 @@ import './Activities.css'
 
 const Activities = () => {
     return (
-        <div>
+        <div className='activities-side'>
             <div className='profile'>
                     <img src={image} alt="error" />
                         <div>
@@ -32,10 +32,10 @@ const Activities = () => {
                 <div className="study-details">
                     <h2>Study Details</h2>
                     <div className='study-time'>
-                        <h4>Study Time: <small>0</small> second</h4>
+                        <h4>Study Time: <small>0</small> mins</h4>
                     </div>
                     <div className='break-time'>
-                        <h4>Break Time: <small>0</small> second</h4>
+                        <h4>Break Time: <small>0</small> mins</h4>
                     </div>
                     <div>
                         <button className="activities-btn">Activity Completed</button>

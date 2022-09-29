@@ -9,7 +9,10 @@ const Task = () => {
         fetch('data.json')
         .then(res=>res.json())
         .then(data=>setBooks(data))
-    },[])
+    },[]);
+    const handleAddToActivity =(books)=>{
+        console.log(books)
+    }
     return (
         <div className='library-container'>
             <div className='books-container'>
@@ -17,7 +20,7 @@ const Task = () => {
                 <h2>Select your books</h2>
                 <div className='books-card'>
                     {
-                        books.map(book=> <Book book={book} key={book.id}></Book>)
+                        books.map(book=> <Book book={book} key={book.id} handleAddToActivity={handleAddToActivity}></Book>)
                     }
                 </div>
             </div>
